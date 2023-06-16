@@ -1,0 +1,38 @@
+<idea-plugin>
+    <id>com.smallodd</id>
+    <name>DubboTester</name>
+    <vendor email="smallodd@aliyun.com" url="">smallodd</vendor>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="183"/>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="DubboTester"
+                    secondary="false"
+                    anchor="bottom"
+                    icon="/icons/dubbo.svg"
+                    factoryClass="com.smallodd.dubbo.test.DubboPanelToolWindow"/>
+        <applicationService serviceImplementation="com.smallodd.dubbo.test.DubboSetingState"/>
+        <!-- alt + enter -->
+        <intentionAction>
+            <className>com.smallodd.dubbo.test.action.DubboTesterIntentionAction</className>
+        </intentionAction>
+        <applicationConfigurable parentId="tools" instance="com.smallodd.dubbo.test.config.AppSettingsConfigurable"
+                                 id="org.intellij.sdk.settings.AppSettingsConfigurable"
+                                 displayName="DubboTester"/>
+    </extensions>
+
+    <actions>
+        <action id="DubboTesterAction"
+                class="com.smallodd.dubbo.test.action.DubboTesterToolWindowOpenAnAction"
+                text="RunDubboTester"
+                description="DubboInvokerFrameOpen"
+                icon="/icons/dubbo.svg"
+                popup="true">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>
