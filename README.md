@@ -5,7 +5,7 @@
 -------------
 
 在使用dubbo开发的过程中有的时候需要测试自己写的dubbo接口 于是乎就有了 DubboTest 插件
-本插件根据 https://github.com/yanglanxing/DubboTest 改编.适配了最新版本对idea</br>
+本插件根据 https://github.com/yanglanxing/DubboTest 改编.适配了 idea 2022.2.5 </br>
 
 另,多谢@yanglanxing 大佬的插件 如有启发,请点star
 
