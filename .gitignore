@@ -13,6 +13,7 @@ build/
 .fastRequest
 *.iws
 *.iml
+.run
 *.ipr
 out/
 !**/src/main/**/out/
